@@ -1,0 +1,7 @@
+FROM python
+
+WORKDIR /usr/src/app
+RUN python -m pip install pika --upgrade
+COPY receiver.py ./
+
+CMD ["python", "receiver.py"]
